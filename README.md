@@ -5,3 +5,37 @@ DevSearch is a website, which was the main part of a Django course, that is why 
 ## Technologies
 - Python version: 3.10.5
 - Django version: 4.0.3
+
+## Initialize
+Create .env file with enviromental variables in project's base folder with application secret key and database credentials:
+
+```
+SECRET_KEY = <project_secret_key>
+DB_NAME = <database_name>
+DB_USER = <database_user>
+DB_PASSWORD = <database_password>
+```
+
+## Setup
+Create and run an isolated environment:
+
+```
+$ python -m venv env
+$ source env/bin/activate
+```
+Install the dependencies:
+
+
+```
+(env)$ pip install -r requirements.txt
+```
+Makemigrations and migrate:
+```
+(env)$ python manage.py makemigrations
+(env)$ python manage.py migrate
+```
+
+To run the server:
+```
+(env)$ python manage.py runserver
+```
